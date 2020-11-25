@@ -49,7 +49,7 @@ text = """
     According to Wikipedia, it uses an \"area probability design\" for random sampling so that they can gather data  on American
     people from all kinds of backgrounds(urban, rural, suburban,etc).
 
-    Source consulted: https://www.payscale.com/data/gender-pay-gap , http://www.gss.norc.org/About-The-GSS , https://en.wikipedia.org/wiki/General_Social_Survey 
+    Sources consulted: https://www.payscale.com/data/gender-pay-gap , http://www.gss.norc.org/About-The-GSS , https://en.wikipedia.org/wiki/General_Social_Survey 
     
     
 
