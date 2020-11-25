@@ -187,12 +187,12 @@ app.layout = html.Div(
                                   for i in ['sex', 'region', 'education']],
                          value='sex')
 
-        ], style={'width': '25%', 'float': 'left'}),
+        ], style={'width': '25%', 'float': 'left','color':'pink'}),
         html.Div([
 
             dcc.Graph(id="graph")
 
-        ], style={'width': '70%', 'float': 'right'})
+        ], style={'width': '70%', 'float': 'right','color':'pink'}})
     ]
 
 )
