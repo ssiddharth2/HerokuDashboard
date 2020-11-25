@@ -171,6 +171,7 @@ app.layout = html.Div(
         html.H5("Extra Credit Portion Part 2: User Input Barplot"),
 
         html.Div([
+        html.Div([
 
             html.H3("x-axis feature"),
 
@@ -194,6 +195,7 @@ app.layout = html.Div(
             dcc.Graph(id="graph")
 
         ], style={'width': '70%', 'float': 'right','color':'blue','background-color':'rgba(0, 255, 255, 0.3)'})
+        ],style={'background-color':'rgba(0, 255, 255, 0.3)'})
     ], style={'background-color':'rgba(255, 182, 193, 0.3)'}
 
 )
