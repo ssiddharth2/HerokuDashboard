@@ -93,6 +93,7 @@ fig2 = px.scatter(gss_clean, x='job_prestige', y='income', color='sex',
                   labels={'job_prestige': 'Job Prestige',
                           'income': 'Income'},
                   hover_data=['job_prestige', 'income', 'education', 'socioeconomic_index'])
+fig2.update_layout(paper_bgcolor='rgba(0, 255, 255, 0.3)')
 fig2.update(layout=dict(title=dict(x=0.5)))
 
 fig3 = px.box(gss_clean, x='income', y='sex', color='sex',
@@ -151,7 +152,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig3)
 
-        ], style={'width': '48%', 'float': 'left','background-color':'rgba(0, 255, 255, 0.15)'}),
+        ], style={'width': '48%', 'float': 'left'}),
 
         html.Div([
 
@@ -159,7 +160,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig4)
 
-        ], style={'width': '48%', 'float': 'right', 'background-color':'rgba(0, 255, 255, 0.15)'}),
+        ], style={'width': '48%', 'float': 'right'}),
 
         html.H5(
             "Assessing Distribution of Income By Sex For Each of the Job Prestige Cateogories"),
@@ -205,11 +206,13 @@ def make_bar(x, group):
     gss_trial = pd.crosstab(gss_clean[x], gss_clean[group]).reset_index()
     gss_trial = pd.melt(gss_trial, id_vars=x, value_vars=gss_trial.columns[1:])
     gss_trial = gss_trial.rename({'value': 'count'}, axis=1)
-    return px.bar(gss_trial, x=x, y='count', color=group,
+    fig= px.bar(gss_trial, x=x, y='count', color=group,
                   labels={'count': 'Number of People'},
                   hover_data=[x],
                   text='count',
                   barmode='group')
+    fig.update_layout(showlegend=True, paper_bgcolor='rgba(0, 255, 255, 0.3)')
+    return fig
 
 
 if __name__ == '__main__':
