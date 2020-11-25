@@ -188,12 +188,12 @@ app.layout = html.Div(
                                   for i in ['sex', 'region', 'education']],
                          value='sex')
 
-        ], style={'width': '25%', 'float': 'left','color':'pink','background-color':'rgba(255, 182, 193, 0.3)'}),
+        ], style={'width': '25%', 'float': 'left','color':'pink','background-color':'rgba(0, 255, 255, 0.3)'}),
         html.Div([
 
             dcc.Graph(id="graph")
 
-        ], style={'width': '70%', 'float': 'right','color':'blue','background-color':'rgba(255, 182, 193, 0.3)'})
+        ], style={'width': '70%', 'float': 'right','color':'blue','background-color':'rgba(0, 255, 255, 0.3)'})
     ], style={'background-color':'rgba(255, 182, 193, 0.3)'}
 
 )
