@@ -192,7 +192,7 @@ app.layout = html.Div(
 
             dcc.Graph(id="graph")
 
-        ], style={'width': '70%', 'float': 'right','color':'pink'}})
+        ], style={'width': '70%', 'float': 'right','color':'pink'})
     ]
 
 )
