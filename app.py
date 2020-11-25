@@ -192,8 +192,8 @@ app.layout = html.Div(
 
             dcc.Graph(id="graph")
 
-        ], style={'width': '70%', 'float': 'right','color':'pink'})
-    ]
+        ], style={'width': '70%', 'float': 'right','color':'blue'})
+    ], style={'background-color':'rgba(255, 182, 193, 0.3)'}
 
 )
 
