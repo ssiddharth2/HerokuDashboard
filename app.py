@@ -151,7 +151,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig3)
 
-        ], style={'width': '48%', 'float': 'left'}),
+        ], style={'width': '48%', 'float': 'left','background-color':'rgba(0, 255, 255, 0.3)'}),
 
         html.Div([
 
@@ -159,7 +159,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig4)
 
-        ], style={'width': '48%', 'float': 'right'}),
+        ], style={'width': '48%', 'float': 'right', 'background-color':'rgba(0, 255, 255, 0.3)'}),
 
         html.H5(
             "Assessing Distribution of Income By Sex For Each of the Job Prestige Cateogories"),
