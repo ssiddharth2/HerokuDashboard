@@ -119,7 +119,7 @@ fig5 = px.box(gss_sub, x='income', y='sex', color='sex',
                   '1', '2', '3', '4', '5', '6']},
               width=1000, height=600)
 fig5.update(layout=dict(title=dict(x=0.5)))
-fig5.update_layout(showlegend=True)
+fig5.update_layout(showlegend=True,paper_bgcolor='rgba(0, 255, 255, 0.3))
 fig5.for_each_annotation(lambda a: a.update(text=a.text.replace("vote=", "")))
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -151,7 +151,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig3)
 
-        ], style={'width': '48%', 'float': 'left','background-color':'rgba(0, 255, 255, 0.3)'}),
+        ], style={'width': '48%', 'float': 'left','background-color':'rgba(0, 255, 255, 0.15)'}),
 
         html.Div([
 
@@ -159,7 +159,7 @@ app.layout = html.Div(
 
             dcc.Graph(figure=fig4)
 
-        ], style={'width': '48%', 'float': 'right', 'background-color':'rgba(0, 255, 255, 0.3)'}),
+        ], style={'width': '48%', 'float': 'right', 'background-color':'rgba(0, 255, 255, 0.15)'}),
 
         html.H5(
             "Assessing Distribution of Income By Sex For Each of the Job Prestige Cateogories"),
