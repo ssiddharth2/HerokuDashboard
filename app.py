@@ -124,7 +124,7 @@ fig5.update_layout(showlegend=True)
 fig5.for_each_annotation(lambda a: a.update(text=a.text.replace("vote=", "")))
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+server=app.server
 
 app.layout = html.Div(
     [
