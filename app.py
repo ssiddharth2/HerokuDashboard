@@ -83,7 +83,7 @@ fig1 = px.bar(breadwinner, x='male_breadwinner', y='count', color='sex',
               hover_data=['male_breadwinner'],
               text='count',
               barmode='group')
-fig1.update_layout(showlegend=True)
+fig1.update_layout(showlegend=True, paper_bgcolor='rgba(0, 255, 255, 0.3)')
 fig1.update(layout=dict(title=dict(x=0.5)))
 
 gss_clean2 = gss_clean.dropna(subset=['sex'])
@@ -97,12 +97,12 @@ fig2.update(layout=dict(title=dict(x=0.5)))
 
 fig3 = px.box(gss_clean, x='income', y='sex', color='sex',
               labels={'income': 'Income', 'sex': ''})
-fig3.update_layout(showlegend=False)
+fig3.update_layout(showlegend=False, paper_bgcolor='rgba(0, 255, 255, 0.3)')
 fig3.update(layout=dict(title=dict(x=0.5)))
 
 fig4 = px.box(gss_clean, x='job_prestige', y='sex', color='sex',
               labels={'job_prestige': 'Job Presitge', 'sex': ''})
-fig4.update_layout(showlegend=False)
+fig4.update_layout(showlegend=False, paper_bgcolor='rgba(0, 255, 255, 0.3)')
 fig4.update(layout=dict(title=dict(x=0.5)))
 
 gss_sub = gss_clean[['income', 'sex', 'job_prestige']]
